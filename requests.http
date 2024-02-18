@@ -1,0 +1,34 @@
+@port = 5000
+@idCliente = 1
+
+
+GET http://localhost:{{port}}/clientes/6/extrato
+
+
+GET http://localhost:{{port}}/clientes/{{idCliente}}/extrato
+
+###
+
+POST http://localhost:{{port}}/clientes/{{idCliente}}/transacoes
+Content-Type: application/json
+
+{
+    "valor" : 11,
+    "tipo" : "c",
+    "descricao" : "pix 2"
+}
+
+###
+
+POST http://localhost:{{port}}/clientes/{{idCliente}}/transacoes
+Content-Type: application/json
+
+{
+    "valor": 11,
+    "tipo": "t",
+    "descricao": "ruim"
+}
+
+###
+
+POST http://localhost:{{port}}/admin/db-reset
