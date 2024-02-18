@@ -81,7 +81,7 @@ app.MapPost("/clientes/{id}/transacoes", async (int id, TransacaoRequest transac
         await using var cmd = conn.CreateCommand();
         cmd.CommandText = $"select novo_saldo, possui_erro, mensagem from {dbFuncs[transacao.Tipo]}($1, $2, $3)";
         cmd.Parameters.AddWithValue(id);
-        cmd.Parameters.AddWithValue(transacao.ValorTratado);
+        cmd.Parameters.AddWithValue(transacao.Valor);
         cmd.Parameters.AddWithValue(transacao.Descricao);
         using var reader = await cmd.ExecuteReaderAsync();
         await reader.ReadAsync();
