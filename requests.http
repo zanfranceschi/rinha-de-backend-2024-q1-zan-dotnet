@@ -24,7 +24,7 @@ POST http://localhost:{{port}}/clientes/{{idCliente}}/transacoes
 Content-Type: application/json
 
 {
-    "valor": 1.1,
+    "valor": 11,
     "tipo": "t",
     "descricao": "ruim"
 }
