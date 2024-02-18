@@ -5,7 +5,6 @@ services:
     image: zanfranceschi/rinha-2024q1-crebito-dotnet
     hostname: api01
     environment:
-      - ASPNETCORE_ENVIRONMENT=Rinha
       - ASPNETCORE_URLS=http://+:80
       - DB_CONNECTION_STRING=Host=db;Username=admin;Password=123;Database=rinha;Minimum Pool Size=10;Maximum Pool Size=10;Application Name=RinhaDeBackendDotnet
     ports:
