@@ -7,8 +7,7 @@ public record ExtratoResponse(ExtratoSaldoResponse Saldo, IList<ExtratoUltimasTr
 public class TransacaoRequest
 {
     private readonly static string[] TIPOS = ["c", "d"];
-    public object? Valor { get; set; }
-    public int ValorTratado;
+    public int Valor { get; set; }
     public string? Tipo { get; set; }
     public string? Descricao { get; set; }
     public bool Valida()
@@ -16,8 +15,7 @@ public class TransacaoRequest
         return TIPOS.Contains(Tipo)
             && !string.IsNullOrEmpty(Descricao)
             && Descricao.Length <= 10
-            && Valor is not null
-            && int.TryParse(Valor.ToString(), out ValorTratado);
+            && Valor > 0;
     }
 }
 public record TransacaoResponse(int Saldo, int Limite);
