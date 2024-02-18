@@ -11,7 +11,7 @@ Submissão feita com:
 - `nginx` como load balancer
 - `postgres` como banco de dados
 - `dotnet 8.0 - C#` para api
-- [repositório da api](https://github.com/zanfranceschi/rinha-de-backend-2024-q1-poc)
+- [repositório da api](https://github.com/zanfranceschi/rinha-de-backend-2024-q1-zan-dotnet)
 
 [@zanfranceschi](https://twitter.com/zanfranceschi) @ twitter
 [@rinhadebackend](https://twitter.com/rinhadebackend) @ twitter
